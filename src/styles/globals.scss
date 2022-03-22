@@ -1,0 +1,100 @@
+@import 'colors.scss';
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+@tailwind screens;
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@layer utilities {
+    .focus-ring {
+        @apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-team-current focus:ring-team-current focus-within:ring-team-current group-hover:ring-team-current group-focus:ring-team-current ring-team-current ring-offset-4 dark:ring-offset-gray-900 ring-offset-white;
+    }
+
+    .focus-ring.danger {
+        @apply dark:focus:ring-red-500 dark:hover:ring-red-500 dark:focus-within:ring-red-500 dark:group-hover:ring-red-500 group-focus:dark:ring-red-500 focus:ring-red-500 hover:ring-red-500 focus-within:ring-red-500 group-hover:ring-red-500 group-focus:ring-red-500 ring-red-500;
+    }
+
+    // .bg-primary {
+    //     @apply dark:bg-primary dark:text-yellow-500 bg-primary text-yellow-500;
+    // }
+
+    // .bg-secondary {
+    //     @apply bg-gray-100 dark:bg-gray-800;
+    // }
+
+    .bg-alt {
+        @apply bg-gray-200 dark:bg-gray-700;
+    }
+    .bg-gradient-inverse {
+        @apply bg-gradient-to-br from-blue-600  via-purple-500 to-orange-500;
+    }
+    .bg-inverse-opacity {
+        @apply bg-gray-900 dark:bg-gray-100;
+    }
+    .bg-inverse {
+        @apply bg-black dark:bg-white;
+    }
+    .bg-primary {
+        @apply dark:bg-gray-900 bg-white;
+    }
+
+    .border-primary {
+        @apply border-gray-900 dark:border-white;
+    }
+    .border-form {
+        @apply border-brand;
+    }
+    .border-secondary {
+        @apply border-gray-200 dark:border-gray-600;
+    }
+
+    .text-primary {
+        @apply text-black dark:text-gray-300;
+    }
+
+    .text-secondary {
+        @apply dark:text-blueGray-500 text-gray-500;
+    }
+    .text-brand-inverse {
+        @apply text-brand dark:text-brand;
+    }
+
+    .text-inverse {
+        @apply dark:text-black text-white;
+    }
+    .border-section {
+        @apply dark:border-gray-700 border-gray-200;
+    }
+    .bg-nav {
+        @apply dark:bg-gray-900 bg-white;
+    }
+    .text-bronze {
+        @apply text-orange-400 dark:text-orange-400;
+    }
+    .text-prata {
+        @apply text-neutral-500 dark:text-neutral-400;
+    }
+    .text-ouro {
+        @apply text-yellow-500 dark:text-yellow-400;
+    }
+}

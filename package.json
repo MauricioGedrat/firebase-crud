@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-context-crud",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx}\""
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "framer-motion": "^5.5.5",
+    "google-map-react": "^2.1.10",
+    "next": "^12.0.7",
+    "next-themes": "^0.0.15",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.33.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "^12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.0",
+    "tailwindcss": "^3.0.2",
+    "typescript": "4.5.2"
+  }
+}
