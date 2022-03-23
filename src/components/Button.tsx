@@ -1,17 +1,20 @@
 import React, { ReactNode } from 'react'
 
 interface ButtonProps {
-    cor?: 'green' | 'blue' | 'gray'
+    cor?: 'red' | 'green' | 'blue' | 'gray'
     className?: string
+    onClick?: () => void
     children: ReactNode
 }
 
 const Button = (props: ButtonProps) => {
+    const cor = props.cor ?? 'gray'
     return (
         <button
+            onClick={props.onClick}
             className={`
             p-4 rounded-md bg-gradient-to-r
-            from-green-400 to-green-700 text-white
+            from-blue-400 to-blue-700 text-white
             font-bold 
             ${props.className}
             `}
