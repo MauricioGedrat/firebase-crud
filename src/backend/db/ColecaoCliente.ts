@@ -1,6 +1,6 @@
-import Client from 'components/core/Client'
-import firebase from 'backend/config'
-import ClienteRepositorio from 'components/core/ClienteRepositiorio'
+import Client from '../../components/core/Client'
+import firebase from '../config'
+import ClienteRepositorio from '../../components/core/ClienteRepositiorio'
 
 export default class ColecaoCliente implements ClienteRepositorio {
     #conversor = {

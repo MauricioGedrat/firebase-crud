@@ -1,5 +1,5 @@
-import { TrashSvg } from 'common/svgIcons'
-import EditSvg from 'common/svgIcons/EditSvg'
+import { TrashSvg } from '../common/svgIcons'
+import EditSvg from '../common/svgIcons/EditSvg'
 import React from 'react'
 import Client from './core/Client'
 

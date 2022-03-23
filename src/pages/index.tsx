@@ -1,22 +1,23 @@
-import ColecaoCliente from 'backend/db/ColecaoCliente'
-import Button from 'components/Button'
-import Client from 'components/core/Client'
-import ClienteRepositorio from 'components/core/ClienteRepositiorio'
-import Formulario from 'components/Formulario'
-import Layout from 'components/Layout'
-import Table from 'components/Table'
-import React, { useState } from 'react'
+import Button from '../components/Button'
+import Client from '../components/core/Client'
+import Formulario from '../components/Formulario'
+import Layout from '../components/Layout'
+import Table from '../components/Table'
+import React, { useState, useEffect } from 'react'
+import ClienteRepositorio from '../components/core/ClienteRepositiorio'
+import ColecaoCliente from '../backend/db/ColecaoCliente'
 
 const index = () => {
+    const repo: ClienteRepositorio = new ColecaoCliente()
+
     const [cliente, setCliente] = useState<Client>(Client.vazio())
+    const [clientes, setClientes] = useState<Client[]>([])
     const [visible, setVisible] = useState<'tabela' | 'form'>('tabela')
 
-    const clientes = [
-        new Client('Ana', 34, '1'),
-        new Client('Bia', 44, '2'),
-        new Client('Carlos', 23, '3'),
-        new Client('Pedro', 54, '4'),
-    ]
+    useEffect(() => {
+        const docRef = repo.obterTodos().then(setClientes)
+    }, [])
+
     function clienteSelecionado(cliente: Client) {
         setCliente(cliente)
         setVisible('form')
